@@ -9,7 +9,7 @@ var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.ut
 // Exported root namespace
 var $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
 
-$root.textsecure = (function() {
+$root.textsecure = (function () {
 
     /**
      * Namespace textsecure.
@@ -18,7 +18,7 @@ $root.textsecure = (function() {
      */
     var textsecure = {};
 
-    textsecure.WhisperMessage = (function() {
+    textsecure.WhisperMessage = (function () {
 
         /**
          * Properties of a WhisperMessage.
@@ -143,21 +143,21 @@ $root.textsecure = (function() {
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
-                case 1:
-                    message.ephemeralKey = reader.bytes();
-                    break;
-                case 2:
-                    message.counter = reader.uint32();
-                    break;
-                case 3:
-                    message.previousCounter = reader.uint32();
-                    break;
-                case 4:
-                    message.ciphertext = reader.bytes();
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
+                    case 1:
+                        message.ephemeralKey = reader.bytes();
+                        break;
+                    case 2:
+                        message.counter = reader.uint32();
+                        break;
+                    case 3:
+                        message.previousCounter = reader.uint32();
+                        break;
+                    case 4:
+                        message.ciphertext = reader.bytes();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
                 }
             }
             return message;
@@ -290,7 +290,7 @@ $root.textsecure = (function() {
         return WhisperMessage;
     })();
 
-    textsecure.PreKeyWhisperMessage = (function() {
+    textsecure.PreKeyWhisperMessage = (function () {
 
         /**
          * Properties of a PreKeyWhisperMessage.
@@ -437,27 +437,27 @@ $root.textsecure = (function() {
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
-                case 5:
-                    message.registrationId = reader.uint32();
-                    break;
-                case 1:
-                    message.preKeyId = reader.uint32();
-                    break;
-                case 6:
-                    message.signedPreKeyId = reader.uint32();
-                    break;
-                case 2:
-                    message.baseKey = reader.bytes();
-                    break;
-                case 3:
-                    message.identityKey = reader.bytes();
-                    break;
-                case 4:
-                    message.message = reader.bytes();
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
+                    case 5:
+                        message.registrationId = reader.uint32();
+                        break;
+                    case 1:
+                        message.preKeyId = reader.uint32();
+                        break;
+                    case 6:
+                        message.signedPreKeyId = reader.uint32();
+                        break;
+                    case 2:
+                        message.baseKey = reader.bytes();
+                        break;
+                    case 3:
+                        message.identityKey = reader.bytes();
+                        break;
+                    case 4:
+                        message.message = reader.bytes();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
                 }
             }
             return message;
@@ -615,7 +615,7 @@ $root.textsecure = (function() {
         return PreKeyWhisperMessage;
     })();
 
-    textsecure.KeyExchangeMessage = (function() {
+    textsecure.KeyExchangeMessage = (function () {
 
         /**
          * Properties of a KeyExchangeMessage.
@@ -751,24 +751,24 @@ $root.textsecure = (function() {
             while (reader.pos < end) {
                 var tag = reader.uint32();
                 switch (tag >>> 3) {
-                case 1:
-                    message.id = reader.uint32();
-                    break;
-                case 2:
-                    message.baseKey = reader.bytes();
-                    break;
-                case 3:
-                    message.ephemeralKey = reader.bytes();
-                    break;
-                case 4:
-                    message.identityKey = reader.bytes();
-                    break;
-                case 5:
-                    message.baseKeySignature = reader.bytes();
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
+                    case 1:
+                        message.id = reader.uint32();
+                        break;
+                    case 2:
+                        message.baseKey = reader.bytes();
+                        break;
+                    case 3:
+                        message.ephemeralKey = reader.bytes();
+                        break;
+                    case 4:
+                        message.identityKey = reader.bytes();
+                        break;
+                    case 5:
+                        message.baseKeySignature = reader.bytes();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
                 }
             }
             return message;

@@ -37,7 +37,7 @@ async function _asyncQueueExecutor(queue, cleanup) {
     cleanup();
 }
 
-module.exports = function(bucket, awaitable) {
+module.exports = function (bucket, awaitable) {
     /* Run the async awaitable only when all other async calls registered
      * here have completed (or thrown).  The bucket argument is a hashable
      * key representing the task queue to use. */
@@ -46,8 +46,6 @@ module.exports = function(bucket, awaitable) {
         Object.defineProperty(awaitable, 'name', { writable: true });
         if (typeof bucket === 'string') {
             awaitable.name = bucket;
-        } else {
-            // console.warn("Unhandled bucket type (for naming):", typeof bucket, bucket);
         }
     }
     let inactive;
